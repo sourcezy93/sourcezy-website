@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>System Showcase - Technical Deep Dive | Sourcezy</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#233D4C",      // Deep Navy/Slate
+                        "accent": "#2872A1",       // Rich Blue
+                        "soft-bg": "#CBDDE9",      // Soft Blue
+                        "muted-sage": "#789A99",   // Sage Grey
+                        "cream": "#FEFACD",        // Highlight Cream
+                        "forest-dark": "#1A2517",  // Deep Background
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer components {
+            .nav-link {
+                @apply text-sm font-semibold text-primary/80 hover:text-accent transition-all duration-300 relative py-2;
+            }
+            .nav-link::after {
+                @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300;
+            }
+            .nav-link:hover::after {
+                @apply w-full;
+            }
+            .btn-elite {
+                @apply bg-primary text-white text-sm font-bold px-8 py-3.5 rounded-none hover:bg-accent transition-all duration-500 uppercase tracking-widest shadow-xl;
+            }
+            .reveal {
+                @apply opacity-0 translate-y-10 transition-all duration-1000 ease-out;
+            }
+            .reveal.active {
+                @apply opacity-100 translate-y-0;
+            }
+            .comparison-row:nth-child(even) { @apply bg-soft-bg/10; }
+        }
+    </style>
+</head>
+
+<body class="bg-[#F8FAFC] font-sans text-primary selection:bg-accent/20">
+
+    <header class="fixed top-0 z-50 w-full border-b border-primary/10 bg-white/80 backdrop-blur-md">
+        <div class="mx-auto max-w-[1440px] px-8 flex items-center justify-between h-24">
+            <div class="flex items-center">
+                <a href="Brand_gateway.html" class="group">
+                    <img src="sourcezy.png" alt="Sourcezy" class="h-14 w-auto transform group-hover:scale-105 transition-transform duration-500">
+                </a>
+            </div>
+            
+            <nav class="hidden lg:flex items-center gap-10">
+                <a class="nav-link" href="solutions.html">Solutions</a>
+                <a class="nav-link text-accent" href="system_showcase.html">Hardware</a>
+                <a class="nav-link" href="support.html">Support</a>
+                <a class="nav-link" href="company.html">Company</a>
+                <a class="nav-link" href="bulk_inquiry.html">Bulk Inquiry</a>
+            </nav>
+
+            <div class="flex items-center gap-6">
+                <a href="contact.html" class="btn-elite text-xs">Consult Expert</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        
+        <section id="magicard600" class="px-8 py-20 lg:py-32 max-w-[1440px] mx-auto w-full border-b border-primary/5 reveal">
+            <div class="flex flex-col gap-16 lg:flex-row items-center">
+                <div class="w-full lg:w-1/2 bg-white p-12 shadow-2xl border border-primary/5">
+                    <img alt="Magicard 600 NEO" class="w-full h-auto object-contain drop-shadow-2xl animate__animated animate__fadeIn" src="https://magicard.com/content/uploads/class_images/xa02af142-762d-11ed-b5d6-0645eac4c674.png.pagespeed.ic.qlJN0QkdOW.png"/>
+                </div>
+                <div class="flex flex-col gap-8 lg:w-1/2">
+                    <div class="flex flex-col gap-4">
+                        <span class="inline-block px-4 py-1 bg-accent/10 text-accent text-[10px] font-black tracking-widest uppercase w-fit">Platinum Series</span>
+                        <h1 class="text-5xl lg:text-7xl font-bold tracking-tight font-display">Magicard 600 NEO</h1>
+                        <p class="text-primary/60 text-lg leading-relaxed">The professional gold standard for high-security identity issuance. Featuring industry-leading 600x300 dpi resolution and digital shredding technology as standard.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="contact.html" class="btn-elite">Request Quote</a>
+                        <a href="brochures/600neo.pdf" download="Magicard_600NEO_Brochure.pdf" class="px-8 py-3.5 bg-[#e7ebf3] text-[#0d121b] font-bold uppercase tracking-widest text-xs hover:opacity-80 transition-all duration-500 cursor-pointer flex items-center justify-center">
+                            Download Brochure
+                        </a>
+                        <a href="#comparison" class="px-8 py-3.5 border-2 border-primary font-bold uppercase tracking-widest text-xs hover:bg-primary hover:text-white transition-all duration-500">Compare Systems</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="magicard300" class="px-8 py-20 lg:py-32 bg-soft-bg/10 reveal">
+            <div class="max-w-[1440px] mx-auto flex flex-col gap-16 lg:flex-row-reverse items-center">
+                <div class="w-full lg:w-1/2 bg-white p-12 shadow-2xl border border-primary/5">
+                    <img alt="Magicard 300 NEO" class="w-full h-auto object-contain drop-shadow-2xl" src="https://magicard.com/content/uploads/class_images/xfefbbad0-756f-11ed-92c7-06f9654bc8a2.png.pagespeed.ic.ZkXm0PJGYP.png"/>
+                </div>
+                <div class="flex flex-col gap-8 lg:w-1/2">
+                    <div class="flex flex-col gap-4">
+                        <span class="inline-block px-4 py-1 bg-primary/10 text-primary text-[10px] font-black tracking-widest uppercase w-fit">Mid-Volume Desktop</span>
+                        <h2 class="text-5xl lg:text-7xl font-bold tracking-tight font-display">Magicard 300 NEO</h2>
+                        <p class="text-primary/60 text-lg leading-relaxed">Robust, durable and reliable, the Magicard 300 NEO is perfect for schools, colleges and medium sized businesses that print up to 10,000 cards per year.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="contact.html" class="btn-elite">Request Quote</a>
+                        <a href="brochures/300neo.pdf" download="Magicard_300NEO_Brochure.pdf" class="px-8 py-3.5 bg-[#e7ebf3] text-[#0d121b] font-bold uppercase tracking-widest text-xs hover:opacity-80 transition-all duration-500 cursor-pointer flex items-center justify-center">
+                            Download Brochure
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="magicardE" class="px-8 py-20 lg:py-32 max-w-[1440px] mx-auto w-full border-b border-primary/5 reveal">
+            <div class="flex flex-col gap-16 lg:flex-row items-center">
+                <div class="w-full lg:w-1/2 bg-white p-12 shadow-2xl border border-primary/5">
+                    <img alt="Magicard E+" class="w-full h-auto object-contain drop-shadow-2xl" src="https://magicard.com/content/uploads/class_images/xe1ede836-9841-11ef-8a5c-06f9654bc8a2.png.pagespeed.ic.PCF7pvGww6.png"/>
+                </div>
+                <div class="flex flex-col gap-8 lg:w-1/2">
+                    <div class="flex flex-col gap-4">
+                        <span class="inline-block px-4 py-1 bg-muted-sage/10 text-muted-sage text-[10px] font-black tracking-widest uppercase w-fit">Entry Level Compact</span>
+                        <h2 class="text-5xl lg:text-7xl font-bold tracking-tight font-display">Magicard E+</h2>
+                        <p class="text-primary/60 text-lg leading-relaxed">Small but mighty. The E+ is the perfect entry-level solution for low volume card printing without sacrificing the security of the Magicard brand.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="contact.html" class="btn-elite">Request Quote</a>
+                        <a href="brochures/magicardE.pdf" download="Magicard_EPlus_Brochure.pdf" class="px-8 py-3.5 bg-[#e7ebf3] text-[#0d121b] font-bold uppercase tracking-widest text-xs hover:opacity-80 transition-all duration-500 cursor-pointer flex items-center justify-center">
+                            Download Brochure
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="prima802" class="px-8 py-20 lg:py-32 bg-primary text-white reveal">
+            <div class="max-w-[1440px] mx-auto flex flex-col gap-16 lg:flex-row-reverse items-center">
+                <div class="w-full lg:w-1/2 bg-white/5 backdrop-blur-md p-12 border border-white/10">
+                    <img alt="PRIMA-802 Retransfer" class="w-full h-auto object-contain drop-shadow-2xl" src="https://magicard.com/content/uploads/class_images/xe4c9d196-e88b-11eb-93e9-020683bef092.png.pagespeed.ic.oRS6N3v4XC.png"/>
+                </div>
+                <div class="flex flex-col gap-8 lg:w-1/2">
+                    <div class="flex flex-col gap-4">
+                        <span class="inline-block px-4 py-1 bg-accent text-white text-[10px] font-black tracking-widest uppercase w-fit">Industrial Retransfer HD</span>
+                        <h2 class="text-5xl lg:text-7xl font-bold tracking-tight font-display text-soft-bg">PRIMA-802</h2>
+                        <p class="text-soft-bg/60 text-lg leading-relaxed">The pinnacle of retransfer technology. Delivers FIPS-201 compliant, photo-quality, over-the-edge printing for the most demanding enterprise needs.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="contact.html" class="bg-white text-primary px-10 py-4 font-bold uppercase tracking-widest text-xs hover:bg-accent hover:text-white transition-all duration-500">Order System</a>
+                        <a href="brochures/prima8.pdf" download="Prima_802_Brochure.pdf" class="px-8 py-3.5 border border-white/30 text-white font-bold uppercase tracking-widest text-xs hover:bg-white/10 transition-all duration-500 cursor-pointer flex items-center justify-center">
+                            Download Brochure
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="comparison" class="py-32 px-8 bg-white reveal">
+            <div class="max-w-[1440px] mx-auto">
+                <div class="mb-16">
+                    <h2 class="font-display text-4xl font-bold mb-4">Technical Comparison</h2>
+                    <div class="h-1.5 w-24 bg-accent"></div>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse min-w-[1000px]">
+                        <thead>
+                            <tr class="bg-primary text-white">
+                                <th class="p-6 uppercase tracking-widest text-[10px] font-black">Feature Set</th>
+                                <th class="p-6 uppercase tracking-widest text-[10px] font-black">600 NEO</th>
+                                <th class="p-6 uppercase tracking-widest text-[10px] font-black">300 NEO</th>
+                                <th class="p-6 uppercase tracking-widest text-[10px] font-black">Prima 8</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm border-x border-b border-primary/5">
+                            <tr class="comparison-row">
+                                <td class="p-6 font-bold">Print Engine</td>
+                                <td class="p-6">Direct-to-card</td>
+                                <td class="p-6">Direct-to-card</td>
+                                <td class="p-6 font-bold text-accent">Retransfer HD</td>
+                            </tr>
+                            <tr class="comparison-row">
+                                <td class="p-6 font-bold">Max Resolution</td>
+                                <td class="p-6">600 dpi (HD)</td>
+                                <td class="p-6">300 dpi (Standard)</td>
+                                <td class="p-6">600 dpi (Photo)</td>
+                            </tr>
+                            <tr class="comparison-row">
+                                <td class="p-6 font-bold">Production Speed</td>
+                                <td class="p-6">190 cards/hr</td>
+                                <td class="p-6">160 cards/hr</td>
+                                <td class="p-6">100 cards/hr</td>
+                            </tr>
+                            <tr class="comparison-row">
+                                <td class="p-6 font-bold">Security Features</td>
+                                <td class="p-6">Digital Shredding / HoloKote</td>
+                                <td class="p-6">Digital Shredding / HoloKote</td>
+                                <td class="p-6">Tactile Impression / Over-edge</td>
+                            </tr>
+                            <tr class="comparison-row">
+                                <td class="p-6 font-bold">Connectivity</td>
+                                <td class="p-6">USB, Eth, WiFi</td>
+                                <td class="p-6">USB, Eth</td>
+                                <td class="p-6">USB, Eth</td>
+                            </tr>
+                            <tr class="comparison-row">
+                                <td class="p-6 font-bold">Partner Support</td>
+                                <td colspan="3" class="p-6 font-black text-accent uppercase text-center tracking-widest">Authorized Platinum Network Support</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-accent py-24 text-center reveal">
+            <div class="max-w-[1440px] mx-auto px-8">
+                <h2 class="text-white text-4xl md:text-5xl font-bold mb-8 italic">Secure by Design: Digital Shredding™</h2>
+                
+                <p class="text-white/80 text-xl max-w-3xl mx-auto mb-16">All NEO series printers fragment your sensitive print data after every issuance cycle, ensuring personal information can never be recovered from the hardware.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="bg-white/10 p-10 backdrop-blur-md border border-white/20">
+                        <span class="material-symbols-outlined text-white text-5xl mb-6">gavel</span>
+                        <h4 class="font-bold text-white uppercase tracking-widest text-sm">GDPR Compliance</h4>
+                    </div>
+                    <div class="bg-white/10 p-10 backdrop-blur-md border border-white/20">
+                        <span class="material-symbols-outlined text-white text-5xl mb-6">security</span>
+                        <h4 class="font-bold text-white uppercase tracking-widest text-sm">Hardware Cryptography</h4>
+                    </div>
+                    <div class="bg-white/10 p-10 backdrop-blur-md border border-white/20">
+                        <span class="material-symbols-outlined text-white text-5xl mb-6">verified_user</span>
+                        <h4 class="font-bold text-white uppercase tracking-widest text-sm">HoloKote® Secure</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-primary text-white pt-24 pb-12">
+        <div class="mx-auto max-w-[1440px] px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <img src="sourcezy.png" alt="Sourcezy" class="h-12 mb-8 brightness-0 invert">
+                    <p class="text-soft-bg/50 text-sm leading-relaxed max-w-xs">
+                        Defining the next generation of secure identification through engineering excellence and platinum-tier partnerships.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest text-xs mb-10 text-accent">Hardware</h4>
+                    <ul class="space-y-4 text-sm text-soft-bg/70">
+                        <li><a href="solutions.html" class="hover:text-white transition-colors">NEO Printers</a></li>
+                        <li><a href="#prima802" class="hover:text-white transition-colors">Retransfer Systems</a></li>
+                        <li><a href="solutions.html" class="hover:text-white transition-colors">Ribbons & Consumables</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest text-xs mb-10 text-accent">Navigation</h4>
+                    <ul class="space-y-4 text-sm text-soft-bg/70">
+                        <li><a href="company.html" class="hover:text-white transition-colors">Our Firm</a></li>
+                        <li><a href="support.html" class="hover:text-white transition-colors">Tech Support</a></li>
+                        <li><a href="bulk_inquiry.html" class="hover:text-white transition-colors">Bulk Inquiry</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest text-xs mb-10 text-accent">Contact</h4>
+                    <p class="text-soft-bg/70 text-sm mb-4 italic">sales@sourcezy.in</p>
+                    <p class="text-soft-bg/70 text-sm">+91 9886554160</p>
+                    <a href="contact.html" class="mt-6 inline-block text-[10px] font-black uppercase tracking-widest border-b border-accent pb-1">Expert Consultation</a>
+                </div>
+            </div>
+            
+            <div class="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-[0.2em] text-soft-bg/40">
+                <p>© 2026 Sourcezy Global Solutions. Precision in Protection.</p>
+                <div class="flex gap-8">
+                    <a href="thank_you.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Checker
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+
+        // Reveal Logic
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

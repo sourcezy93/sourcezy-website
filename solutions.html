@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Hardware Lineup | Sourcezy Solutions</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#233D4C",      // Deep Navy/Slate
+                        "accent": "#2872A1",       // Rich Blue
+                        "soft-bg": "#CBDDE9",      // Soft Blue
+                        "muted-sage": "#789A99",   // Sage Grey
+                        "cream": "#FEFACD",        // Highlight Cream
+                        "forest-dark": "#1A2517",  // Deep Background
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer components {
+            .nav-link {
+                @apply text-sm font-semibold text-primary/80 hover:text-accent transition-all duration-300 relative py-2;
+            }
+            .nav-link::after {
+                @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300;
+            }
+            .nav-link:hover::after {
+                @apply w-full;
+            }
+            .btn-elite {
+                @apply bg-primary text-white text-sm font-bold px-8 py-3.5 rounded-none hover:bg-accent transition-all duration-500 uppercase tracking-widest shadow-xl;
+            }
+            .sidebar-item {
+                @apply flex items-center gap-3 px-4 py-3 text-primary/70 hover:bg-soft-bg/30 hover:text-primary transition-all duration-300 border-l-4 border-transparent;
+            }
+            .sidebar-item.active {
+                @apply bg-soft-bg/50 text-primary border-accent font-bold;
+            }
+            .reveal {
+                @apply opacity-0 translate-y-10 transition-all duration-1000 ease-out;
+            }
+            .reveal.active {
+                @apply opacity-100 translate-y-0;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-[#F8FAFC] font-sans text-primary">
+
+    <header class="fixed top-0 z-50 w-full border-b border-primary/10 bg-white/80 backdrop-blur-md">
+        <div class="mx-auto max-w-[1440px] px-8 flex items-center justify-between h-24">
+            <div class="flex items-center">
+                <a href="Brand_gateway.html" class="group">
+                    <img src="sourcezy.png" alt="Sourcezy" class="h-14 w-auto transform group-hover:scale-105 transition-transform duration-500">
+                </a>
+            </div>
+            
+            <nav class="hidden lg:flex items-center gap-10">
+                <a class="nav-link text-accent" href="solutions.html">Solutions</a>
+                <a class="nav-link" href="system_showcase.html">Hardware</a>
+                <a class="nav-link" href="support.html">Support</a>
+                <a class="nav-link" href="company.html">Company</a>
+                <a class="nav-link" href="bulk_inquiry.html">Bulk Inquiry</a>
+            </nav>
+
+            <div class="flex items-center gap-6">
+                <a href="contact.html" class="btn-elite text-xs">Consult Expert</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-20 px-8 max-w-[1440px] mx-auto w-full">
+        <div class="flex flex-col lg:flex-row gap-16">
+            
+            <aside class="w-full lg:w-72 shrink-0 animate__animated animate__fadeInLeft">
+                <div class="sticky top-32 space-y-8">
+                    <div>
+                        <h3 class="text-xs font-black uppercase tracking-[0.2em] text-accent mb-6">Hardware Categories</h3>
+                        <div class="flex flex-col bg-white border border-primary/5 shadow-sm">
+                            <a href="#" class="sidebar-item active">
+                                <span class="material-symbols-outlined text-xl">grid_view</span> All Printers
+                            </a>
+                            <a href="#" class="sidebar-item">
+                                <span class="material-symbols-outlined text-xl">badge</span> NEO Series
+                            </a>
+                            <a href="supplies.html" class="sidebar-item">
+                                <span class="material-symbols-outlined text-xl">layers</span> Ribbons & Kits
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-primary p-6 text-white reveal">
+                        <h4 class="text-xs font-bold uppercase tracking-widest text-soft-bg mb-4">Dealer Network</h4>
+                        <p class="text-xs leading-relaxed opacity-70 mb-6">Hardware warranty and technical coverage is managed exclusively through authorized Platinum partners.</p>
+                        <a href="contact.html" class="text-[10px] font-black uppercase tracking-widest border-b border-soft-bg/50 pb-1 hover:text-soft-bg">Inquire Now</a>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="flex-1">
+                <div class="mb-16 reveal">
+                    <h1 class="font-display text-5xl font-bold mb-4">Hardware Lineup</h1>
+                    <p class="text-primary/60 text-lg max-w-2xl">Official Magicard NEO and Prima systems engineered for high-security identification and industrial-grade issuance.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    
+                    <div class="reveal group bg-white border border-primary/5 hover:border-accent/30 transition-all duration-500 shadow-sm hover:shadow-2xl">
+                        <div class="h-72 bg-soft-bg/10 flex items-center justify-center p-10 relative overflow-hidden">
+                            <div class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest">600 DPI HD</div>
+                            <img alt="Magicard 600 NEO" class="max-h-full object-contain transform group-hover:scale-110 transition-transform duration-700" src="https://magicard.com/content/uploads/class_images/xa02af142-762d-11ed-b5d6-0645eac4c674.png.pagespeed.ic.qlJN0QkdOW.png"/>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold mb-2">Magicard 600 NEO</h3>
+                            <p class="text-xs text-accent font-bold mb-4 uppercase tracking-[0.2em]">Platinum Standard</p>
+                            <p class="text-sm text-primary/60 mb-8 leading-relaxed">Built-in digital shredding and custom HoloKote® for high-security enterprise environments.</p>
+                            <a href="system_showcase.html#magicard600" class="btn-elite w-full block text-center py-4 text-xs">Technical Deep Dive</a>
+                        </div>
+                    </div>
+
+                    <div class="reveal group bg-white border border-primary/5 hover:border-accent/30 transition-all duration-500 shadow-sm hover:shadow-2xl" style="transition-delay: 100ms;">
+                        <div class="h-72 bg-soft-bg/10 flex items-center justify-center p-10 relative overflow-hidden">
+                            <div class="absolute top-4 right-4 bg-muted-sage text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest">Mid-Volume</div>
+                            <img alt="Magicard 300 NEO" class="max-h-full object-contain transform group-hover:scale-110 transition-transform duration-700" src="https://magicard.com/content/uploads/class_images/xfefbbad0-756f-11ed-92c7-06f9654bc8a2.png.pagespeed.ic.ZkXm0PJGYP.png"/>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold mb-2">Magicard 300 NEO</h3>
+                            <p class="text-xs text-primary/40 font-bold mb-4 uppercase tracking-[0.2em]">Robust Desktop</p>
+                            <p class="text-sm text-primary/60 mb-8 leading-relaxed">Perfect balance of speed and security for schools and local government offices.</p>
+                            <a href="system_showcase.html#magicard300" class="w-full block text-center py-4 border-2 border-primary text-xs font-black uppercase tracking-widest hover:bg-primary hover:text-white transition-all">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="reveal group bg-white border border-primary/5 hover:border-accent/30 transition-all duration-500 shadow-sm hover:shadow-2xl" style="transition-delay: 200ms;">
+                        <div class="h-72 bg-soft-bg/10 flex items-center justify-center p-10 relative overflow-hidden">
+                            <div class="absolute top-4 right-4 bg-muted-sage text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest">Instant</div>
+                            <img alt="Magicard E+" class="max-h-full object-contain transform group-hover:scale-110 transition-transform duration-700" src="https://magicard.com/content/uploads/class_images/xe1ede836-9841-11ef-8a5c-06f9654bc8a2.png.pagespeed.ic.PCF7pvGww6.png"/>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold mb-2">Magicard E+</h3>
+                            <p class="text-xs text-primary/40 font-bold mb-4 uppercase tracking-[0.2em]">Entry-Level Elite</p>
+                            <p class="text-sm text-primary/60 mb-8 leading-relaxed">Compact, reliable solution for small businesses requiring big-brand security.</p>
+                            <a href="system_showcase.html#magicardE" class="w-full block text-center py-4 border-2 border-primary text-xs font-black uppercase tracking-widest hover:bg-primary hover:text-white transition-all">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="reveal group bg-white border border-primary/5 hover:border-accent/30 transition-all duration-500 shadow-sm hover:shadow-2xl" style="transition-delay: 300ms;">
+                        <div class="h-72 bg-soft-bg/10 flex items-center justify-center p-10 relative overflow-hidden">
+                            <div class="absolute top-4 right-4 bg-accent text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest">Retransfer HD</div>
+                            <img alt="Prima 8" class="max-h-full object-contain transform group-hover:scale-110 transition-transform duration-700" src="https://magicard.com/content/uploads/class_images/xe4c9d196-e88b-11eb-93e9-020683bef092.png.pagespeed.ic.oRS6N3v4XC.png"/>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold mb-2">PRIMA-802</h3>
+                            <p class="text-xs text-accent font-bold mb-4 uppercase tracking-[0.2em]">Industrial Grade</p>
+                            <p class="text-sm text-primary/60 mb-8 leading-relaxed">The pinnacle of retransfer technology for high-definition over-the-edge issuance.</p>
+                            <a href="system_showcase.html#prima802" class="w-full block text-center py-4 border-2 border-primary text-xs font-black uppercase tracking-widest hover:bg-primary hover:text-white transition-all">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-24 reveal">
+                    <h2 class="font-display text-3xl font-bold mb-10 pb-4 border-b border-primary/10">Authorized Consumables</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+                        <div class="group">
+                            <div class="h-48 bg-white border border-primary/5 flex items-center justify-center p-6 group-hover:border-accent transition-colors">
+                                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQI2urMxhSiLScAux0rpivMkND7-YtcRjDiYzDYf0kDtjQi1Unn7PMMk48unske3pM6NBL94iDcLCQN496lKo6kAtgrM_Ca2DvOYPnCmlgtiheP3peEPvij" class="max-h-full group-hover:scale-105 transition-transform">
+                            </div>
+                            <div class="pt-4">
+                                <h4 class="font-bold text-sm text-accent">EK-300 YMCKO</h4>
+                                <p class="text-[10px] text-primary/50 uppercase tracking-widest mt-1">Full Color Ribbon</p>
+                            </div>
+                        </div>
+
+                        <div class="group">
+                            <div class="h-48 bg-white border border-primary/5 flex items-center justify-center p-6 group-hover:border-accent transition-colors">
+                                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS9tQGYeDvI5o5bz6TvufbqMBDCVyJBQI09cAYP04uBc_h_apUrpxRUSm22FTwUTr3YBKmo3_VkCCfjHH4aiITrwE5uDqdl" class="max-h-full group-hover:scale-105 transition-transform">
+                            </div>
+                            <div class="pt-4">
+                                <h4 class="font-bold text-sm text-accent">MA-300 YMCKO</h4>
+                                <p class="text-[10px] text-primary/50 uppercase tracking-widest mt-1">High Capacity Ribbon</p>
+                            </div>
+                        </div>
+
+                        <div class="group">
+                            <div class="h-48 bg-white border border-primary/5 flex items-center justify-center p-6 group-hover:border-accent transition-colors">
+                                <img src="https://m.media-amazon.com/images/I/514omMWDkOL.jpg" class="max-h-full group-hover:scale-105 transition-transform">
+                            </div>
+                            <div class="pt-4">
+                                <h4 class="font-bold text-sm text-accent">Professional Care Kit</h4>
+                                <p class="text-[10px] text-primary/50 uppercase tracking-widest mt-1">Cleaning Supplies</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-primary text-white pt-24 pb-12">
+        <div class="mx-auto max-w-[1440px] px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <img src="sourcezy.png" alt="Sourcezy" class="h-12 mb-8 brightness-0 invert">
+                    <p class="text-soft-bg/50 text-sm leading-relaxed max-w-xs">
+                        Defining the next generation of secure identification through engineering excellence and platinum-tier partnerships.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest text-xs mb-10 text-accent">Solutions</h4>
+                    <ul class="space-y-4 text-sm text-soft-bg/70">
+                        <li><a href="solutions.html" class="hover:text-white transition-colors">Card Printers</a></li>
+                        <li><a href="system_showcase.html" class="hover:text-white transition-colors">Security Hardware</a></li>
+                        <li><a href="solutions.html" class="hover:text-white transition-colors">Identity Software</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest text-xs mb-10 text-accent">Navigation</h4>
+                    <ul class="space-y-4 text-sm text-soft-bg/70">
+                        <li><a href="company.html" class="hover:text-white transition-colors">Our Firm</a></li>
+                        <li><a href="support.html" class="hover:text-white transition-colors">Tech Support</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Consultation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest text-xs mb-10 text-accent">Direct Contact</h4>
+                    <p class="text-soft-bg/70 text-sm mb-4 italic">sales@sourcezy.in</p>
+                    <p class="text-soft-bg/70 text-sm">+91 9886554160</p>
+                </div>
+            </div>
+            
+            <div class="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-[0.2em] text-soft-bg/40">
+                <p>© 2026 Sourcezy Global Solutions. Precision in Protection.</p>
+                <div class="flex gap-8">
+                    <a href="thank_you.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Security Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Reveal Animation Logic
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

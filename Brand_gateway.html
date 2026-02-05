@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Sourcezy | Elite Identity Solutions</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#233D4C",      // Deep Navy/Slate
+                        "accent": "#2872A1",       // Rich Blue
+                        "soft-bg": "#CBDDE9",      // Soft Blue
+                        "muted-sage": "#789A99",   // Sage Grey
+                        "cream": "#FEFACD",        // Highlight Cream
+                        "forest-dark": "#1A2517",  // Deep Background
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer components {
+            .nav-link {
+                @apply text-sm font-semibold text-primary/80 hover:text-accent transition-all duration-300 relative py-2;
+            }
+            .nav-link::after {
+                @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300;
+            }
+            .nav-link:hover::after {
+                @apply w-full;
+            }
+            .btn-elite {
+                @apply bg-primary text-white text-sm font-bold px-8 py-4 rounded-none hover:bg-accent transition-all duration-500 uppercase tracking-widest shadow-lg active:scale-95;
+            }
+            .reveal {
+                @apply opacity-0 translate-y-10 transition-all duration-1000 ease-out;
+            }
+            .reveal.active {
+                @apply opacity-100 translate-y-0;
+            }
+            .glass-panel {
+                @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-2xl;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-[#F1F5F9] font-sans text-primary selection:bg-accent/20">
+
+    <header class="fixed top-0 z-50 w-full border-b border-primary/10 bg-white/80 backdrop-blur-lg">
+        <div class="mx-auto max-w-[1440px] px-8 flex items-center justify-between h-24">
+            <div class="flex items-center">
+                <a href="Brand_gateway.html" class="group">
+                    <img src="sourcezy.png" alt="Sourcezy" class="h-14 w-auto transform group-hover:scale-105 transition-transform duration-500">
+                </a>
+            </div>
+            
+            <nav class="hidden lg:flex items-center gap-10">
+                <a class="nav-link" href="solutions.html">Solutions</a>
+                <a class="nav-link" href="system_showcase.html">Hardware</a>
+                <a class="nav-link" href="support.html">Support</a>
+                <a class="nav-link" href="company.html">Company</a>
+                <a class="nav-link" href="bulk_inquiry.html">Bulk Inquiry</a>
+            </nav>
+
+            <div class="flex items-center gap-6">
+                <a href="contact.html" class="btn-elite text-xs">Consult Expert</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <section class="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-to-br from-soft-bg/40 to-white">
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-accent/5 -skew-x-12 transform translate-x-1/4"></div>
+            
+            <div class="mx-auto max-w-[1440px] px-8 grid lg:grid-cols-2 gap-16 items-center w-full relative z-10">
+                <div class="animate__animated animate__fadeInLeft">
+                    <div class="inline-flex items-center gap-3 mb-6 text-accent font-bold tracking-[0.3em] text-xs uppercase">
+                        <span class="h-[2px] w-10 bg-accent"></span>
+                        Official Magicard Partner
+                    </div>
+                    <h1 class="font-display text-7xl lg:text-8xl font-bold leading-[0.95] mb-8 text-primary">
+                        Precision <br/>
+                        <span class="text-accent italic font-medium">Security.</span>
+                    </h1>
+                    <p class="text-xl text-primary/70 max-w-[550px] leading-relaxed mb-10">
+                        Defining the next generation of secure identification. We provide the world's most trusted card printing technology for enterprise excellence.
+                    </p>
+                    <div class="flex flex-wrap gap-5">
+                        <a href="solutions.html" class="btn-elite">Explore Solutions</a>
+                        <a href="contact.html" class="px-8 py-4 border-2 border-primary font-bold uppercase tracking-widest text-sm hover:bg-primary hover:text-white transition-all duration-500">Talk to Expert</a>
+                    </div>
+                </div>
+
+                <div class="relative animate__animated animate__fadeInRight">
+                    <div class="absolute inset-0 bg-accent/20 blur-[120px] rounded-full animate-pulse"></div>
+                    <div class="relative glass-panel p-8 transform rotate-1 hover:rotate-0 transition-transform duration-700">
+                        <img src="https://magicard.com/content/uploads/class_images/xa02af142-762d-11ed-b5d6-0645eac4c674.png.pagespeed.ic.qlJN0QkdOW.png" 
+                             alt="Magicard 600" class="w-full h-auto drop-shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 bg-white">
+            <div class="mx-auto max-w-[1440px] px-8">
+                <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+                    <h2 class="font-display text-4xl font-bold mb-6">Key Issuance Systems</h2>
+                    <p class="text-primary/60">Professional hardware designed for high-volume, secure environments.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="reveal group">
+                        <div class="relative overflow-hidden bg-soft-bg/20 aspect-square flex items-center justify-center p-12 mb-8 group-hover:bg-soft-bg/40 transition-colors duration-500">
+                            <img src="https://magicard.com/content/uploads/class_images/xa02af142-762d-11ed-b5d6-0645eac4c674.png.pagespeed.ic.qlJN0QkdOW.png" class="group-hover:scale-110 group-hover:-rotate-3 transition-all duration-700">
+                        </div>
+                        <div class="flex gap-2 mb-4">
+                            <span class="text-[10px] font-bold uppercase tracking-widest bg-accent/10 text-accent px-2 py-1">600 DPI</span>
+                            <span class="text-[10px] font-bold uppercase tracking-widest bg-muted-sage/10 text-muted-sage px-2 py-1">Enterprise</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Magicard 600 NEO</h3>
+                        <p class="text-primary/60 text-sm mb-6 leading-relaxed">World-class print quality with built-in digital shredding for maximum data privacy.</p>
+                        <a href="system_showcase.html#magicard600" class="text-xs font-black uppercase tracking-widest border-b-2 border-accent pb-1 hover:text-accent transition-colors">View Deep Dive</a>
+                    </div>
+
+                    <div class="reveal group" style="transition-delay: 200ms;">
+                        <div class="relative overflow-hidden bg-soft-bg/20 aspect-square flex items-center justify-center p-12 mb-8 group-hover:bg-soft-bg/40 transition-colors duration-500">
+                            <img src="https://magicard.com/content/uploads/class_images/xfefbbad0-756f-11ed-92c7-06f9654bc8a2.png.pagespeed.ic.ZkXm0PJGYP.png" class="group-hover:scale-110 group-hover:rotate-3 transition-all duration-700">
+                        </div>
+                        <div class="flex gap-2 mb-4">
+                            <span class="text-[10px] font-bold uppercase tracking-widest bg-accent/10 text-accent px-2 py-1">Reliable</span>
+                            <span class="text-[10px] font-bold uppercase tracking-widest bg-muted-sage/10 text-muted-sage px-2 py-1">Desktop</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Magicard 300 NEO</h3>
+                        <p class="text-primary/60 text-sm mb-6 leading-relaxed">Robust performance for schools and businesses printing up to 10,000 cards annually.</p>
+                        <a href="system_showcase.html#magicard300" class="text-xs font-black uppercase tracking-widest border-b-2 border-accent pb-1 hover:text-accent transition-colors">View Deep Dive</a>
+                    </div>
+
+                    <div class="reveal group" style="transition-delay: 400ms;">
+                        <div class="relative overflow-hidden bg-soft-bg/20 aspect-square flex items-center justify-center p-12 mb-8 group-hover:bg-soft-bg/40 transition-colors duration-500">
+                            <img src="https://magicard.com/content/uploads/class_images/xe1ede836-9841-11ef-8a5c-06f9654bc8a2.png.pagespeed.ic.PCF7pvGww6.png" class="group-hover:scale-110 group-hover:-rotate-3 transition-all duration-700">
+                        </div>
+                        <div class="flex gap-2 mb-4">
+                            <span class="text-[10px] font-bold uppercase tracking-widest bg-accent/10 text-accent px-2 py-1">Compact</span>
+                            <span class="text-[10px] font-bold uppercase tracking-widest bg-muted-sage/10 text-muted-sage px-2 py-1">Instant</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Magicard E+</h3>
+                        <p class="text-primary/60 text-sm mb-6 leading-relaxed">The ultimate entry-level solution for high-security badge issuance in smaller offices.</p>
+                        <a href="system_showcase.html#magicardE" class="text-xs font-black uppercase tracking-widest border-b-2 border-accent pb-1 hover:text-accent transition-colors">View Deep Dive</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-soft-bg/20">
+            <div class="mx-auto max-w-[1440px] px-8">
+                <div class="bg-primary p-16 md:p-24 relative overflow-hidden flex flex-col items-center text-center text-white">
+                    <div class="absolute top-0 left-0 w-64 h-64 bg-accent/20 blur-[100px] -translate-x-1/2 -translate-y-1/2"></div>
+                    
+                    <div class="relative z-10 max-w-3xl">
+                        <h2 class="font-display text-5xl font-bold mb-8 uppercase tracking-tight">Large Scale Deployment?</h2>
+                        <p class="text-soft-bg/70 text-lg mb-12">We offer specialized pricing and dedicated engineering support for government and enterprise-level bulk orders.</p>
+                        <div class="flex flex-wrap justify-center gap-6">
+                            <a href="bulk_inquiry.html" class="bg-accent text-white font-bold px-10 py-5 hover:bg-white hover:text-primary transition-all duration-300 uppercase tracking-widest text-sm">Initiate Bulk Request</a>
+                            <a href="solutions.html" class="border border-white/30 px-10 py-5 hover:bg-white/10 transition-all uppercase tracking-widest text-sm">Full Catalog</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-primary text-white pt-24 pb-12">
+        <div class="mx-auto max-w-[1440px] px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <img src="sourcezy.png" alt="Sourcezy" class="h-12 mb-8 brightness-0 invert">
+                    <p class="text-soft-bg/50 text-sm leading-relaxed max-w-xs">
+                        Defining the next generation of secure identification through engineering excellence and platinum-tier partnerships.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest text-xs mb-10 text-accent">Solutions</h4>
+                    <ul class="space-y-4 text-sm text-soft-bg/70">
+                        <li><a href="solutions.html" class="hover:text-white transition-colors">Card Printers</a></li>
+                        <li><a href="system_showcase.html" class="hover:text-white transition-colors">Security Hardware</a></li>
+                        <li><a href="solutions.html" class="hover:text-white transition-colors">Identity Software</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest text-xs mb-10 text-accent">Navigation</h4>
+                    <ul class="space-y-4 text-sm text-soft-bg/70">
+                        <li><a href="company.html" class="hover:text-white transition-colors">Our Firm</a></li>
+                        <li><a href="support.html" class="hover:text-white transition-colors">Tech Support</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Consultation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest text-xs mb-10 text-accent">Direct Contact</h4>
+                    <p class="text-soft-bg/70 text-sm mb-4 italic">sales@sourcezy.in</p>
+                    <p class="text-soft-bg/70 text-sm">+91 9886554160</p>
+                </div>
+            </div>
+            
+            <div class="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-[0.2em] text-soft-bg/40">
+                <p>© 2026 Sourcezy Global Solutions. Precision in Protection.</p>
+                <div class="flex gap-8">
+                    <a href="thank_you.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Security Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for Scroll Reveal
+        const observerOptions = { threshold: 0.15 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

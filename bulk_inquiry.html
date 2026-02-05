@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Enterprise Bulk Request | Sourcezy</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#233D4C",      // Deep Navy/Slate
+                        "accent": "#2872A1",       // Rich Blue
+                        "soft-bg": "#CBDDE9",      // Soft Blue
+                        "muted-sage": "#789A99",   // Sage Grey
+                        "cream": "#FEFACD",        // Highlight Cream
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer components {
+            .nav-link {
+                @apply text-sm font-semibold text-primary/80 hover:text-accent transition-all duration-300 relative py-2;
+            }
+            .nav-link::after {
+                @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300;
+            }
+            .nav-link:hover::after {
+                @apply w-full;
+            }
+            .btn-elite {
+                @apply bg-primary text-white text-sm font-bold px-8 py-4 rounded-none hover:bg-accent transition-all duration-500 uppercase tracking-widest shadow-xl active:scale-95;
+            }
+            .form-input {
+                @apply w-full rounded-none border border-primary/10 bg-white px-4 py-3 text-sm focus:border-accent focus:ring-0 transition-all duration-300;
+            }
+            .reveal {
+                @apply opacity-0 translate-y-10 transition-all duration-1000 ease-out;
+            }
+            .reveal.active {
+                @apply opacity-100 translate-y-0;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-[#F8FAFC] font-sans text-primary selection:bg-accent/20">
+
+    <header class="fixed top-0 z-50 w-full border-b border-primary/10 bg-white/80 backdrop-blur-md animate__animated animate__fadeInDown">
+        <div class="mx-auto max-w-[1440px] px-8 flex items-center justify-between h-24">
+            <div class="flex items-center">
+                <a href="Brand_gateway.html" class="group">
+                    <img src="sourcezy.png" alt="Sourcezy" class="h-14 w-auto transform group-hover:scale-105 transition-transform duration-500">
+                </a>
+            </div>
+            
+            <nav class="hidden lg:flex items-center gap-10">
+                <a class="nav-link" href="solutions.html">Solutions</a>
+                <a class="nav-link" href="system_showcase.html">Hardware</a>
+                <a class="nav-link" href="support.html">Support</a>
+                <a class="nav-link" href="company.html">Company</a>
+                <a class="nav-link text-accent" href="bulk_inquiry.html">Bulk Inquiry</a>
+            </nav>
+
+            <div class="flex items-center gap-6">
+                <a href="contact.html" class="btn-elite text-xs">Consult Expert</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-20 px-8 max-w-[1440px] mx-auto w-full">
+        <div class="max-w-[1100px] mx-auto flex flex-col gap-12">
+            
+            <nav class="flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-primary/40 animate__animated animate__fadeIn">
+                <a href="Brand_gateway.html" class="hover:text-accent transition-colors">Home</a>
+                <span class="material-symbols-outlined text-xs">chevron_right</span>
+                <span class="text-accent">Enterprise Bulk Inquiry</span>
+            </nav>
+
+            <div class="border-b border-primary/5 pb-12 reveal">
+                <h1 class="font-display text-5xl lg:text-7xl font-bold uppercase tracking-tighter leading-none mb-6">Enterprise Bulk Request</h1>
+                <p class="text-primary/60 text-xl leading-relaxed max-w-2xl italic">Tailored procurement solutions for large-scale corporate, government, and educational deployments.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <div class="lg:col-span-8 reveal">
+                    <form action="https://formspree.io/f/mgozgqdd" method="POST" class="flex flex-col gap-12">
+                        
+                        <section class="flex flex-col gap-8">
+                            <div class="flex items-center gap-4">
+                                <div class="size-10 bg-accent/10 flex items-center justify-center text-accent">
+                                    <span class="material-symbols-outlined">inventory_2</span>
+                                </div>
+                                <h3 class="text-xl font-bold uppercase tracking-widest font-display">Hardware & Volume</h3>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-[10px] font-black uppercase tracking-[0.2em] text-primary/50">Printers Needed (Qty)</label>
+                                    <input type="number" name="printer_quantity" required placeholder="e.g. 25" class="form-input"/>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-[10px] font-black uppercase tracking-[0.2em] text-primary/50">Cards Needed (Qty)</label>
+                                    <input type="number" name="card_quantity" required placeholder="e.g. 5000" class="form-input"/>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-[10px] font-black uppercase tracking-[0.2em] text-primary/50">Expected Delivery Date</label>
+                                    <input type="date" name="delivery_date" required class="form-input"/>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-[10px] font-black uppercase tracking-[0.2em] text-primary/50">Card Technology</label>
+                                    <select name="tech_type" class="form-input appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23233D4C%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-[length:16px] bg-[right_1rem_center] bg-no-repeat">
+                                        <option value="standard">Standard PVC</option>
+                                        <option value="rfid">RFID / Smart Chip</option>
+                                        <option value="magnetic">Magnetic Stripe</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="flex flex-col gap-8">
+                            <div class="flex items-center gap-4">
+                                <div class="size-10 bg-accent/10 flex items-center justify-center text-accent">
+                                    <span class="material-symbols-outlined">business</span>
+                                </div>
+                                <h3 class="text-xl font-bold uppercase tracking-widest font-display">Organizational Profile</h3>
+                            </div>
+                            <div class="grid grid-cols-1 gap-8">
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-[10px] font-black uppercase tracking-[0.2em] text-primary/50">Organization Legal Name</label>
+                                    <input type="text" name="org_name" required placeholder="Full Entity Name" class="form-input"/>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                                    <div class="flex flex-col gap-2">
+                                        <label class="text-[10px] font-black uppercase tracking-[0.2em] text-primary/50">Official Work Email</label>
+                                        <input type="email" name="email" required placeholder="liaison@company.com" class="form-input"/>
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="text-[10px] font-black uppercase tracking-[0.2em] text-primary/50">Liaison Contact Number</label>
+                                        <input type="tel" name="phone" required placeholder="+91" class="form-input"/>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-[10px] font-black uppercase tracking-[0.2em] text-primary/50">Project Architecture / Special Requirements</label>
+                                    <textarea name="project_details" rows="5" placeholder="Briefly describe the security scope or implementation details..." class="form-input"></textarea>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="flex flex-col gap-6 pt-6">
+                            <button type="submit" class="btn-elite py-6 text-sm tracking-[0.3em]">Submit Formal Bulk Request</button>
+                            <p class="text-center text-primary/40 text-[10px] uppercase tracking-widest">Our enterprise procurement team responds within 12 business hours.</p>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="lg:col-span-4 flex flex-col gap-8 reveal">
+                    <div class="bg-primary p-10 text-white shadow-2xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-accent/20 blur-2xl"></div>
+                        <h4 class="text-xs font-black uppercase tracking-[0.2em] text-accent mb-8">Bulk Tier Benefits</h4>
+                        <ul class="flex flex-col gap-10">
+                            <li class="flex gap-4 group">
+                                <span class="material-symbols-outlined text-accent group-hover:scale-110 transition-transform">verified</span>
+                                <div>
+                                    <p class="text-sm font-bold uppercase tracking-tight">Institutional Pricing</p>
+                                    <p class="text-xs text-soft-bg/60 mt-2 leading-relaxed">Aggressive tiered discounts for large-scale hardware acquisition.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4 group">
+                                <span class="material-symbols-outlined text-accent group-hover:scale-110 transition-transform">engineering</span>
+                                <div>
+                                    <p class="text-sm font-bold uppercase tracking-tight">Priority Integration</p>
+                                    <p class="text-xs text-soft-bg/60 mt-2 leading-relaxed">Dedicated technical architect assigned to your deployment phase.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4 group">
+                                <span class="material-symbols-outlined text-accent group-hover:scale-110 transition-transform">local_shipping</span>
+                                <div>
+                                    <p class="text-sm font-bold uppercase tracking-tight">Global Logistics</p>
+                                    <p class="text-xs text-soft-bg/60 mt-2 leading-relaxed">Direct-from-factory shipping pathways for time-sensitive projects.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-soft-bg/20 p-10 border border-primary/5 text-center">
+                        <p class="text-xs font-bold text-primary/60 uppercase tracking-widest mb-4">Direct Escalation</p>
+                        <a href="mailto:sales@sourcezy.in" class="text-accent font-black hover:underline block mb-2">sales@sourcezy.in</a>
+                        <p class="text-[10px] text-primary/40 uppercase tracking-widest italic">Request Architectural Briefing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-primary text-white pt-24 pb-12">
+        <div class="mx-auto max-w-[1440px] px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <img src="sourcezy.png" alt="Sourcezy" class="h-12 mb-8 brightness-0 invert">
+                    <p class="text-soft-bg/50 text-sm leading-relaxed max-w-xs">
+                        Defining the next generation of secure identification through engineering excellence and platinum-tier partnerships.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest text-xs mb-10 text-accent">Solutions</h4>
+                    <ul class="space-y-4 text-sm text-soft-bg/70">
+                        <li><a href="solutions.html" class="hover:text-white transition-colors">Card Printers</a></li>
+                        <li><a href="system_showcase.html" class="hover:text-white transition-colors">High-Sec Hardware</a></li>
+                        <li><a href="solutions.html" class="hover:text-white transition-colors">Software Kits</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest text-xs mb-10 text-accent">Navigation</h4>
+                    <ul class="space-y-4 text-sm text-soft-bg/70">
+                        <li><a href="company.html" class="hover:text-white transition-colors">Our Firm</a></li>
+                        <li><a href="support.html" class="hover:text-white transition-colors">Tech Support</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Expert Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest text-xs mb-10 text-accent">Contact</h4>
+                    <p class="text-soft-bg/70 text-sm mb-4 italic">sales@sourcezy.in</p>
+                    <p class="text-soft-bg/70 text-sm">+91 9886554160</p>
+                    <a href="bulk_inquiry.html" class="mt-6 inline-block text-[10px] font-black uppercase tracking-widest border-b border-accent pb-1">Enterprise Channel</a>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-[0.2em] text-soft-bg/40">
+                <p>© 2026 Sourcezy Global Solutions. Precision in Protection.</p>
+                <div class="flex gap-8">
+                    <a href="thank_you.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Reveal Logic
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Consultation & Sales | Sourcezy</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#233D4C",      // Deep Navy/Slate
+                        "accent": "#2872A1",       // Rich Blue
+                        "soft-bg": "#CBDDE9",      // Soft Blue
+                        "muted-sage": "#789A99",   // Sage Grey
+                        "cream": "#FEFACD",        // Highlight Cream
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer components {
+            .nav-link {
+                @apply text-sm font-semibold text-primary/80 hover:text-accent transition-all duration-300 relative py-2;
+            }
+            .nav-link::after {
+                @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300;
+            }
+            .nav-link:hover::after {
+                @apply w-full;
+            }
+            .btn-elite {
+                @apply bg-primary text-white text-sm font-bold px-8 py-3.5 rounded-none hover:bg-accent transition-all duration-500 uppercase tracking-widest shadow-xl;
+            }
+            .form-input {
+                @apply w-full rounded-none border border-primary/10 bg-white px-4 py-4 text-sm focus:border-accent focus:ring-0 transition-all duration-300;
+            }
+            .reveal {
+                @apply opacity-0 translate-y-10 transition-all duration-1000 ease-out;
+            }
+            .reveal.active {
+                @apply opacity-100 translate-y-0;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-[#F8FAFC] font-sans text-primary selection:bg-accent/20">
+
+    <header class="fixed top-0 z-50 w-full border-b border-primary/10 bg-white/80 backdrop-blur-md animate__animated animate__fadeInDown">
+        <div class="mx-auto max-w-[1440px] px-8 flex items-center justify-between h-24">
+            <div class="flex items-center">
+                <a href="Brand_gateway.html" class="group">
+                    <img src="sourcezy.png" alt="Sourcezy" class="h-14 w-auto transform group-hover:scale-105 transition-transform duration-500">
+                </a>
+            </div>
+            
+            <nav class="hidden lg:flex items-center gap-10">
+                <a class="nav-link" href="solutions.html">Solutions</a>
+                <a class="nav-link" href="system_showcase.html">Hardware</a>
+                <a class="nav-link" href="support.html">Support</a>
+                <a class="nav-link" href="company.html">Company</a>
+                <a class="nav-link" href="bulk_inquiry.html">Bulk Inquiry</a>
+            </nav>
+
+            <div class="flex items-center gap-6">
+                <a href="contact.html" class="btn-elite text-xs">Consult Expert</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24 flex-1 flex flex-col items-center">
+        <div class="layout-content-container flex flex-col max-w-[1200px] w-full px-8 py-20 gap-20">
+            
+            <section class="reveal">
+                <div class="flex flex-col gap-12 lg:flex-row items-center">
+                    <div class="w-full lg:w-1/2 rounded-none overflow-hidden shadow-2xl">
+                        <div class="w-full aspect-video bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC67QoXS-pdY8uUDtmXwCWL8SEh6uqUcIg4OHizRP0kiB3cZA1jajaWlx63co5gNDRA3MJI5hPoc8woQhedQ7-2z8RxdP1dLgLDteDBBUuSz421vTyzoxw4Ib0Zp8CAHUO90Uiqfu-fPUVdCmmWnHLTcaZNP6w9azskTsCmLx_cat7hs3oiS7nq0JlNYDwwdfg0ZOXZGUU5dJ9jcCjdFVzV-5qUTNMA3T9byHCNa6O0ptekyGDpYOLUxd50_R0U5AJdy8-xmw5tXmc");'></div>
+                    </div>
+                    <div class="flex flex-col gap-6 lg:w-1/2 lg:pl-12">
+                        <span class="text-accent font-black tracking-[0.3em] text-[10px] uppercase">Corporate Liaison</span>
+                        <h1 class="font-display text-5xl lg:text-6xl font-bold uppercase tracking-tighter leading-tight">Book a Specialist Consultation</h1>
+                        <p class="text-primary/60 text-lg leading-relaxed">Our implementation experts are standing by to architect the ideal identification ecosystem for your specific security requirements.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                
+                <div class="lg:col-span-7 bg-white p-10 shadow-2xl border border-primary/5 reveal">
+                    <h2 class="font-display text-3xl font-bold mb-8 uppercase tracking-widest border-b border-primary/5 pb-6">Request Briefing</h2>
+                    <form action="https://formspree.io/f/mgozgqdd" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <input name="full_name" required class="form-input" placeholder="Full Name"/>
+                            <input type="email" name="email" required class="form-input" placeholder="Work Email"/>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <select name="company_size" class="form-input">
+                                <option value="1-50">1-50 employees</option>
+                                <option value="51-200">51-200 employees</option>
+                                <option value="200+">200+ employees</option>
+                            </select>
+                            <select name="interest" class="form-input">
+                                <option value="id">ID Card Printers</option>
+                                <option value="retransfer">Retransfer Printers</option>
+                                <option value="supplies">Consumables & Ribbons</option>
+                            </select>
+                        </div>
+                        <textarea name="details" class="form-input h-40" placeholder="Specify your architectural or security requirements..."></textarea>
+                        <button type="submit" class="btn-elite w-full py-5 text-sm tracking-[0.2em]">Initialize Consultation Request</button>
+                    </form>
+                </div>
+
+                <div class="lg:col-span-5 flex flex-col gap-8 reveal">
+                    <h3 class="font-display text-2xl font-bold uppercase tracking-widest text-accent mb-2">Direct Channels</h3>
+                    
+                    <div class="flex flex-col gap-4">
+                        <a href="https://wa.me/919886554160" target="_blank" class="flex items-center gap-6 p-6 bg-white border border-primary/5 hover:border-accent transition-all duration-300 group">
+                            <div class="size-14 bg-soft-bg/30 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-colors">
+                                <span class="material-symbols-outlined">chat</span>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black uppercase tracking-widest text-primary/40">Secure Messaging</p>
+                                <p class="text-lg font-bold">WhatsApp Expert Desk</p>
+                            </div>
+                        </a>
+
+                        <a href="tel:+919886554160" class="flex items-center gap-6 p-6 bg-white border border-primary/5 hover:border-accent transition-all duration-300 group">
+                            <div class="size-14 bg-soft-bg/30 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-colors">
+                                <span class="material-symbols-outlined">call</span>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black uppercase tracking-widest text-primary/40">Sales Department</p>
+                                <p class="text-lg font-bold">+91 9886554160</p>
+                            </div>
+                        </a>
+
+                        <a href="tel:+919964301093" class="flex items-center gap-6 p-6 bg-white border border-primary/5 hover:border-accent transition-all duration-300 group">
+                            <div class="size-14 bg-soft-bg/30 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-colors">
+                                <span class="material-symbols-outlined">engineering</span>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black uppercase tracking-widest text-primary/40">Engineering Support</p>
+                                <p class="text-lg font-bold">+91 9964301093</p>
+                            </div>
+                        </a>
+
+                        <a href="mailto:sales@sourcezy.in" class="flex items-center gap-6 p-6 bg-white border border-primary/5 hover:border-accent transition-all duration-300 group">
+                            <div class="size-14 bg-soft-bg/30 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-colors">
+                                <span class="material-symbols-outlined">mail</span>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black uppercase tracking-widest text-primary/40">Official Inquiry</p>
+                                <p class="text-lg font-bold">sales@sourcezy.in</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="mt-8 p-8 bg-primary text-white relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-accent/20 blur-2xl"></div>
+                        <h4 class="font-bold uppercase tracking-widest text-xs mb-4 text-accent flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">location_on</span> Logistics HQ
+                        </h4>
+                        <p class="text-sm leading-relaxed text-soft-bg font-medium italic">
+                            SOURCEZY 3rd Floor, 301/A, LR Bande Rd,<br/>
+                            Ambedkar Layout, Shampura, Bengaluru 560032
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="reveal">
+                <div class="h-[500px] w-full border border-primary/10 grayscale hover:grayscale-0 transition-all duration-1000">
+                    <iframe 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.051939115783!2d77.6087796759086!3d13.031713513554476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae160810fb2a89%3A0x5deae2320f956bf4!2sSourcezy!5e0!3m2!1sen!2sin!4v1709600000000!5m2!1sen!2sin">
+                    </iframe>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-primary text-white pt-24 pb-12">
+        <div class="mx-auto max-w-[1440px] px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <img src="sourcezy.png" alt="Sourcezy" class="h-12 mb-8 brightness-0 invert">
+                    <p class="text-soft-bg/50 text-sm leading-relaxed max-w-xs">
+                        Defining the next generation of secure identification through engineering excellence and platinum-tier partnerships.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest text-xs mb-10 text-accent">Solutions</h4>
+                    <ul class="space-y-4 text-sm text-soft-bg/70">
+                        <li><a href="solutions.html" class="hover:text-white transition-colors">Card Printers</a></li>
+                        <li><a href="system_showcase.html" class="hover:text-white transition-colors">High-Sec Hardware</a></li>
+                        <li><a href="solutions.html" class="hover:text-white transition-colors">Software Kits</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest text-xs mb-10 text-accent">Company</h4>
+                    <ul class="space-y-4 text-sm text-soft-bg/70">
+                        <li><a href="company.html" class="hover:text-white transition-colors">About Firm</a></li>
+                        <li><a href="bulk_inquiry.html" class="hover:text-white transition-colors">Bulk Inquiry</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Expert Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest text-xs mb-10 text-accent">Resource Hub</h4>
+                    <ul class="space-y-4 text-sm text-soft-bg/70">
+                        <li><a href="support.html" class="hover:text-white transition-colors">Technical Support</a></li>
+                        <li><a href="solutions.html" class="hover:text-white transition-colors">ribbon Supplies</a></li>
+                        <li><a href="Brand_gateway.html" class="hover:text-white transition-colors">Global Home</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-[0.2em] text-soft-bg/40">
+                <p>© 2026 Sourcezy Global Solutions. Precision in Protection.</p>
+                <div class="flex gap-8">
+                    <a href="thank_you.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Reveal Logic
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

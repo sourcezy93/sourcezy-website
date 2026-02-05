@@ -1,0 +1,9 @@
+# Ignore the driver folder (usually contains local executables/drivers)
+driver/
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore local environment files if any
+.env

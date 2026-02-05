@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Technical Support Hub | Sourcezy</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#233D4C",      // Deep Navy
+                        "accent": "#2872A1",       // Rich Blue
+                        "soft-bg": "#CBDDE9",      // Soft Blue
+                        "muted-sage": "#789A99",   // Sage Grey
+                        "cream": "#FEFACD",        // Cream
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer components {
+            .nav-link {
+                @apply text-sm font-semibold text-primary/80 hover:text-accent transition-all duration-300 relative py-2;
+            }
+            .nav-link::after {
+                @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300;
+            }
+            .nav-link:hover::after {
+                @apply w-full;
+            }
+            .btn-elite {
+                @apply bg-primary text-white text-sm font-bold px-8 py-3.5 rounded-none hover:bg-accent transition-all duration-500 uppercase tracking-widest shadow-xl;
+            }
+            .reveal {
+                @apply opacity-0 translate-y-10 transition-all duration-1000 ease-out;
+            }
+            .reveal.active {
+                @apply opacity-100 translate-y-0;
+            }
+            .support-card {
+                @apply bg-white border border-primary/5 p-6 hover:shadow-2xl transition-all duration-500 hover:border-accent/20;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-[#F8FAFC] font-sans text-primary">
+
+    <header class="fixed top-0 z-50 w-full border-b border-primary/10 bg-white/80 backdrop-blur-md">
+        <div class="mx-auto max-w-[1440px] px-8 flex items-center justify-between h-24">
+            <div class="flex items-center">
+                <a href="Brand_gateway.html" class="group">
+                    <img src="sourcezy.png" alt="Sourcezy" class="h-14 w-auto transform group-hover:scale-105 transition-transform duration-500">
+                </a>
+            </div>
+            
+            <nav class="hidden lg:flex items-center gap-10">
+                <a class="nav-link" href="solutions.html">Solutions</a>
+                <a class="nav-link" href="system_showcase.html">Hardware</a>
+                <a class="nav-link text-accent" href="support.html">Support</a>
+                <a class="nav-link" href="company.html">Company</a>
+                <a class="nav-link" href="bulk_inquiry.html">Bulk Inquiry</a>
+            </nav>
+
+            <div class="flex items-center gap-6">
+                <a href="contact.html" class="btn-elite text-xs">Consult Expert</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <section class="bg-soft-bg/20 py-20 px-8 reveal">
+            <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-1/2 rounded-none overflow-hidden shadow-2xl">
+                    
+                    <div class="w-full aspect-video bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8i72__qVsAi41Kwz1xDf9OD3763_kIyFjB-G3rMF8aWwstDvhwEFYqYHx2Pezc1XtRVtGWceN5_JmCNYKg_CIcA1hjRyChksgZqzL5RMXkxngOEjARSZfPSgbIr7qywYjCbyS2Z6Fg5IOZLuKmwbLVkjBNP-JBcAjZbGxwbU-mSbCnu4ohV34HRADX8pMx7O8RROTbPpsV79manAxBJ1YRDIH3K3R4iarctJccdVFL3DYenAH0YryGW5TbRZ2yTRuZSBnldDF82A");'></div>
+                </div>
+                <div class="flex flex-col gap-8 md:w-1/2 animate__animated animate__fadeInRight">
+                    <div>
+                        <span class="text-accent font-black tracking-[0.3em] text-[10px] uppercase mb-4 block">Resource Center</span>
+                        <h1 class="font-display text-5xl lg:text-6xl font-bold mb-6">Technical Support Hub</h1>
+                        <p class="text-primary/60 text-lg leading-relaxed">Everything required to maintain peak operational performance for Sourcezy issuance systems. Access authorized drivers, technical manuals, and critical firmware updates.</p>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="mailto:sales@sourcezy.in" class="btn-elite">Open Ticket</a>
+                        <a href="contact.html" class="px-8 py-3.5 border-2 border-primary font-bold uppercase tracking-widest text-xs hover:bg-primary hover:text-white transition-all duration-500">Call Engineering</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 px-8 max-w-[1440px] mx-auto reveal">
+            <div class="flex items-center justify-between mb-12">
+                <h2 class="font-display text-3xl font-bold border-l-4 border-accent pl-6">Authorized Drivers</h2>
+                <a class="text-accent font-bold text-sm uppercase tracking-widest hover:mr-2 transition-all" href="#">Full Directory →</a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="support-card flex flex-col">
+                    <div class="w-full aspect-square bg-soft-bg/30 mb-6 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC0-1iI35fOcw0jqmHo3o-l2_6q2JHXrrDvIzjZa3Jwwu26jZlAtmou02LGruaCswOmaZxdgBsBsy1Lcib-AxBJsOZ7IKYVcGKUhQL3hpw2CV_YEKZN3ckb1UIHVJSKn8szsyngbCeaaPiw0hzNIgfcfIESOcwx2GBE59RHhlocliBZ2j_PqVzs7y6YpfskRLPo3wm6ClLZ8Hr0gL4KnUk8WprEnM77aZkbrvAA_HD1PPgocWL8Le9tJyRggX0s8MZyUKJyXvHwpyI");'></div>
+                    <h3 class="font-bold text-lg mb-1">Magicard NEO Driver</h3>
+                    <p class="text-xs text-primary/50 mb-4 uppercase tracking-widest">Windows 10 / 11</p>
+                    <a href="driver/magicard_NEO_Driver_v3.1.2.zip" download="Magicard_NEO_Driver_v3.1.2.zip" class="mt-auto inline-flex items-center gap-2 text-accent font-black text-xs uppercase tracking-tighter hover:underline">
+                        <span class="material-symbols-outlined text-sm">download</span> Get v3.1.2
+                    </a>
+                </div>
+                <div class="support-card flex flex-col">
+                    <div class="w-full aspect-square bg-soft-bg/30 mb-6 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCqjC-1GtD4m96cmR8pljTH0lUVufGiew7D_tZgNMoIJrv4S-Z7zy-ZJtDjDyN9_aRzuXEebLBVYMtkkg5lUsxqspLLYOKSFGLdEKTl5VE_u9WGdATUMFBZIQIssJcnTyC9n9OaotvSUA1s6HZbv2e1dV0s2iTk5-ydEC_8TmdhB7CXMptK3UqeJGQmVMciezqkK4JdB4Fs1bd0_893slSWZD8QUp2NGjgtCP5t4sAH_U-1ov56AuDcOAvLJQaIovBYXhtrvWWeLYc");'></div>
+                    <h3 class="font-bold text-lg mb-1">Prima 4/8 Driver</h3>
+                    <p class="text-xs text-primary/50 mb-4 uppercase tracking-widest">Windows 10 / 11</p>
+                    <div class="flex flex-col gap-2">
+                        <a href="driver/prima_4_8_300dpi_driver.zip" download="Prima_4_8_300dpi_Driver.zip" class="inline-flex items-center gap-2 text-accent font-black text-xs uppercase tracking-tighter hover:underline">
+                            <span class="material-symbols-outlined text-sm">download</span> 300 DPI
+                        </a>
+                        <a href="driver/prima_4_8_600dpi_driver.zip" download="Prima_4_8_600dpi_Driver.zip" class="inline-flex items-center gap-2 text-accent font-black text-xs uppercase tracking-tighter hover:underline">
+                            <span class="material-symbols-outlined text-sm">download</span> 600 DPI
+                        </a>
+                    </div>
+                </div>
+                <div class="support-card flex flex-col">
+                    <div class="w-full aspect-square bg-soft-bg/30 mb-6 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA_UIXhFltemHtu54nATU4e-AAkKMZFkrjGIvmnueb5-6NMen9aBGbx986G0WrmJMvp_8KgefedfOUbNzNpadezaWHQxTobeHtqtLH-Mc5Cf2n8tF54-ObirwkHwCFoH_KE9RV7IbX3zw71X6vB8PdjznmEg4jd90Sx500twYP8kq5gOGXshnOiLWmhhCRHMe7bZ79HICVu_eJ2voG4rjJbW85YdBy54uUjY2YirlD-Fk8UdBwEYQxEm3UWGn2efg6y-F7Ds6nctyI");'></div>
+                    <h3 class="font-bold text-lg mb-1">Windows Core Driver</h3>
+                    <p class="text-xs text-primary/50 mb-4 uppercase tracking-widest">Windows 10 / 11</p>
+                    <a href="driver/Magicard_Driver_v3.1.2.1095.exe" download="Magicard_Driver_v3.1.2.1095.exe" class="mt-auto inline-flex items-center gap-2 text-accent font-black text-xs uppercase tracking-tighter hover:underline">
+                        <span class="material-symbols-outlined text-sm">download</span> Download EXE
+                    </a>
+                </div>
+                <div class="support-card flex flex-col">
+                    <div class="w-full aspect-square bg-soft-bg/30 mb-6 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDk4mZa1SG5IP-F_lXuBZpXyqmVt2zXpznYzdESXfBS2iIOTsWRDvGYKFOrea3qBrYgFHjripli0N5gC3Nx4ZfpvCvTGWeI2V9a6dvLsJbsRX0CL4KZcg6Kp2995wQs2_SL-JkK_B7LzT1KeTCuNbKE4qh1JRuRTtKZyEduM7FRlvYtC4WaWAQNVX0uMUJqVBthyotF7d5fj8vIDhp8MtlF3erMAKdkQFrW3W6Df1S1svYU5r5sJcUYMWGAKf5-NtlUec_JuKKiOvU");'></div>
+                    <h3 class="font-bold text-lg mb-1">Bare Driver Files</h3>
+                    <p class="text-xs text-primary/50 mb-4 uppercase tracking-widest">Server Install</p>
+                    <a href="driver/Magicard_Bare_Driver_Files_v3.1.2.1095.zip" download="Magicard_Bare_Driver_Files_v3.1.2.1095.zip" class="mt-auto inline-flex items-center gap-2 text-accent font-black text-xs uppercase tracking-tighter hover:underline">
+                        <span class="material-symbols-outlined text-sm">download</span> Get Raw Files
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-white px-8 reveal">
+            <div class="max-w-[1440px] mx-auto">
+                <div class="flex items-center justify-between mb-12">
+                    <h2 class="font-display text-3xl font-bold border-l-4 border-accent pl-6">Technical Manuals</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="flex gap-6 p-8 bg-[#F8FAFC] border border-primary/5 items-center hover:border-accent transition-colors group">
+                        <div class="size-16 bg-primary text-white flex items-center justify-center group-hover:bg-accent transition-colors">
+                            <span class="material-symbols-outlined text-3xl">menu_book</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-lg">600 NEO Operation Guide</h3>
+                            <p class="text-xs text-primary/40 uppercase tracking-widest mt-1">PDF • 4.2 MB</p>
+                        </div>
+                        <a href="https://storage.googleapis.com/support_site_files/User_Guides/600NEO/600NEO_User_Guide_v1.02.pdf" target="_blank" class="hover:text-accent transition-colors">
+                            <span class="material-symbols-outlined">open_in_new</span>
+                        </a>
+                    </div>
+                    <div class="flex gap-6 p-8 bg-[#F8FAFC] border border-primary/5 items-center hover:border-accent transition-colors group">
+                        <div class="size-16 bg-primary text-white flex items-center justify-center group-hover:bg-accent transition-colors">
+                            <span class="material-symbols-outlined text-3xl">menu_book</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-lg">300 NEO Operation Guide</h3>
+                            <p class="text-xs text-primary/40 uppercase tracking-widest mt-1">PDF • 2.8 MB</p>
+                        </div>
+                        <a href="https://storage.googleapis.com/support_site_files/User_Guides/300NEO/300NEO_User_Guide_v1.02.pdf" target="_blank" class="hover:text-accent transition-colors">
+                            <span class="material-symbols-outlined">open_in_new</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 px-8 max-w-[1440px] mx-auto reveal">
+            <div class="flex items-center justify-between mb-12">
+                <h2 class="font-display text-3xl font-bold border-l-4 border-accent pl-6">Critical Firmware</h2>
+                <span class="bg-accent text-white text-[10px] px-4 py-1 font-black uppercase tracking-widest animate-pulse">Live Update Available</span>
+            </div>
+            <div class="bg-white border border-primary/5 overflow-hidden shadow-sm">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="bg-primary text-white text-[10px] font-black uppercase tracking-widest">
+                            <th class="px-8 py-6">Product Series</th>
+                            <th class="px-8 py-6">Revision</th>
+                            <th class="px-8 py-6">Release Date</th>
+                            <th class="px-8 py-6 text-right">Deployment</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-primary/5">
+                        <tr class="hover:bg-soft-bg/5 transition-colors">
+                            <td class="px-8 py-6 font-bold text-sm">Sourcezy 300/360 Series</td>
+                            <td class="px-8 py-6 text-xs font-medium text-accent">v15.60 Stable</td>
+                            <td class="px-8 py-6 text-xs text-primary/50 italic">Oct 12, 2025</td>
+                            <td class="px-8 py-6 text-right">
+                                <a href="https://storage.googleapis.com/public_firmware/MB1/15.60/update-15.60.prn" download="update-15.60.prn" class="text-accent font-black text-xs uppercase tracking-widest hover:underline">Download Update</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="py-24 px-8 reveal">
+            <div class="max-w-[1440px] mx-auto bg-primary text-white p-16 text-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-accent/10 pointer-events-none"></div>
+                <h2 class="font-display text-4xl font-bold mb-6">Escalate Diagnostic Inquiry</h2>
+                <p class="text-soft-bg/60 text-lg mb-10 max-w-2xl mx-auto">Authorized technicians are available for complex troubleshooting, warranty adjudication, and on-site deployment assistance.</p>
+                <a href="mailto:sales@sourcezy.in" class="bg-white text-primary px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-accent hover:text-white transition-all duration-500 inline-block shadow-2xl">Initialize Support Ticket</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-primary text-white pt-24 pb-12">
+        <div class="mx-auto max-w-[1440px] px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <img src="sourcezy.png" alt="Sourcezy" class="h-12 mb-8 brightness-0 invert">
+                    <p class="text-soft-bg/50 text-sm leading-relaxed max-w-xs">
+                        Defining the next generation of secure identification through engineering excellence and platinum-tier partnerships.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest text-xs mb-10 text-accent">Support</h4>
+                    <ul class="space-y-4 text-sm text-soft-bg/70">
+                        <li><a href="support.html" class="hover:text-white transition-colors">Drivers & Manuals</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Escalation Desk</a></li>
+                        <li><a href="solutions.html" class="hover:text-white transition-colors">Hardware Setup</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest text-xs mb-10 text-accent">Navigation</h4>
+                    <ul class="space-y-4 text-sm text-soft-bg/70">
+                        <li><a href="company.html" class="hover:text-white transition-colors">About Firm</a></li>
+                        <li><a href="system_showcase.html" class="hover:text-white transition-colors">Hardware Catalog</a></li>
+                        <li><a href="bulk_inquiry.html" class="hover:text-white transition-colors">Bulk Inquiry</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-widest text-xs mb-10 text-accent">Engineering</h4>
+                    <p class="text-soft-bg/70 text-sm mb-4 italic">sales@sourcezy.in</p>
+                    <p class="text-soft-bg/70 text-sm">+91 9886554160</p>
+                </div>
+            </div>
+            
+            <div class="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-[0.2em] text-soft-bg/40">
+                <p>© 2026 Sourcezy Global Solutions. Precision in Protection.</p>
+                <div class="flex gap-8">
+                    <a href="thank_you.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Reveal Animation Logic
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

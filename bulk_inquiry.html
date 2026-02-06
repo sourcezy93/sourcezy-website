@@ -60,27 +60,56 @@
 
 <body class="bg-[#F8FAFC] font-sans text-primary selection:bg-accent/20">
 
-    <header class="fixed top-0 z-50 w-full border-b border-primary/10 bg-white/80 backdrop-blur-md animate__animated animate__fadeInDown">
-        <div class="mx-auto max-w-[1440px] px-8 flex items-center justify-between h-24">
-            <div class="flex items-center">
-                <a href="Brand_gateway.html" class="group">
-                    <img src="sourcezy.png" alt="Sourcezy" class="h-14 w-auto transform group-hover:scale-105 transition-transform duration-500">
-                </a>
-            </div>
-            
-            <nav class="hidden lg:flex items-center gap-10">
-                <a class="nav-link" href="solutions.html">Solutions</a>
-                <a class="nav-link" href="system_showcase.html">Hardware</a>
-                <a class="nav-link" href="support.html">Support</a>
-                <a class="nav-link" href="company.html">Company</a>
-                <a class="nav-link text-accent" href="bulk_inquiry.html">Bulk Inquiry</a>
-            </nav>
+    <header class="fixed top-0 z-50 w-full border-b border-primary/10 bg-white/80 backdrop-blur-lg">
+    <div class="mx-auto max-w-[1440px] px-8 flex items-center justify-between h-24">
+        <a href="Brand_gateway.html">
+            <img src="sourcezy.png" alt="Sourcezy" class="h-10 md:h-14">
+        </a>
 
-            <div class="flex items-center gap-6">
-                <a href="contact.html" class="btn-elite text-xs">Consult Expert</a>
-            </div>
+        <nav class="hidden lg:flex items-center gap-10">
+            <a class="nav-link" href="solutions.html">Solutions</a>
+            <a class="nav-link" href="system_showcase.html">Hardware</a>
+            <a class="nav-link" href="support.html">Support</a>
+            <a class="nav-link" href="company.html">Company</a>
+            <a class="nav-link" href="bulk_inquiry.html">Bulk Inquiry</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+            <a href="contact.html" class="hidden sm:block btn-elite text-[10px] px-4 py-2 md:text-xs md:px-8 md:py-4">Consult Expert</a>
+            <button id="mobile-menu-btn" class="lg:hidden text-primary p-2">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
         </div>
-    </header>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu"
+         class="fixed inset-0 z-[60] translate-x-full transition-transform duration-500 lg:hidden">
+
+        <!-- 🔹 HEADER (NO BLUR) -->
+        <div class="flex justify-between items-center px-8 py-6 bg-white border-b border-primary/10">
+            <img src="sourcezy.png" alt="Sourcezy" class="h-10">
+            <button id="close-menu" class="text-primary p-2">
+                <span class="material-symbols-outlined text-4xl">close</span>
+            </button>
+        </div>
+
+        <!-- 🔹 BLURRED MENU CONTENT -->
+        <div class="flex-1 px-8 pt-12 bg-white/40 backdrop-blur-[80px] shadow-2xl">
+            <nav class="flex flex-col gap-8 text-2xl font-display font-bold text-primary">
+                <a href="solutions.html" class="hover:text-accent transition-colors">Solutions</a>
+                <a href="system_showcase.html" class="hover:text-accent transition-colors">Hardware</a>
+                <a href="support.html" class="hover:text-accent transition-colors">Support</a>
+                <a href="company.html" class="hover:text-accent transition-colors">Company</a>
+                <a href="bulk_inquiry.html" class="hover:text-accent transition-colors">Bulk Inquiry</a>
+
+                <div class="mt-4 pt-8 border-t border-primary/20">
+                    <a href="contact.html" class="btn-elite block text-center">Consult Expert</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
 
     <main class="pt-32 pb-20 px-8 max-w-[1440px] mx-auto w-full">
         <div class="max-w-[1100px] mx-auto flex flex-col gap-12">
@@ -249,6 +278,26 @@
     </footer>
 
     <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('translate-x-full');
+        document.body.style.overflow = 'hidden';
+    });
+
+    closeBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('translate-x-full');
+        document.body.style.overflow = '';
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+            document.body.style.overflow = '';
+        });
+    });
         // Reveal Logic
         const observerOptions = { threshold: 0.1 };
         const observer = new IntersectionObserver((entries) => {

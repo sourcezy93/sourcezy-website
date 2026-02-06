@@ -62,26 +62,47 @@
 <body class="bg-[#F1F5F9] font-sans text-primary selection:bg-accent/20">
 
     <header class="fixed top-0 z-50 w-full border-b border-primary/10 bg-white/80 backdrop-blur-lg">
-        <div class="mx-auto max-w-[1440px] px-8 flex items-center justify-between h-24">
-            <div class="flex items-center">
-                <a href="Brand_gateway.html" class="group">
-                    <img src="sourcezy.png" alt="Sourcezy" class="h-14 w-auto transform group-hover:scale-105 transition-transform duration-500">
-                </a>
-            </div>
+    <div class="mx-auto max-w-[1440px] px-8 flex items-center justify-between h-24">
+        <div class="flex items-center">
+            <a href="Brand_gateway.html" class="group">
+                <img src="sourcezy.png" alt="Sourcezy" class="h-10 md:h-14 w-auto transform group-hover:scale-105 transition-transform duration-500">
+            </a>
+        </div>
             
             <nav class="hidden lg:flex items-center gap-10">
-                <a class="nav-link" href="solutions.html">Solutions</a>
-                <a class="nav-link" href="system_showcase.html">Hardware</a>
-                <a class="nav-link" href="support.html">Support</a>
-                <a class="nav-link" href="company.html">Company</a>
-                <a class="nav-link" href="bulk_inquiry.html">Bulk Inquiry</a>
-            </nav>
+            <a class="nav-link" href="solutions.html">Solutions</a>
+            <a class="nav-link" href="system_showcase.html">Hardware</a>
+            <a class="nav-link" href="support.html">Support</a>
+            <a class="nav-link" href="company.html">Company</a>
+            <a class="nav-link" href="bulk_inquiry.html">Bulk Inquiry</a>
+        </nav>
 
-            <div class="flex items-center gap-6">
-                <a href="contact.html" class="btn-elite text-xs">Consult Expert</a>
-            </div>
+           <div class="flex items-center gap-4">
+            <a href="contact.html" class="hidden sm:block btn-elite text-[10px] px-4 py-2 md:text-xs md:px-8 md:py-4">Consult Expert</a>
+            
+            <button id="mobile-menu-btn" class="lg:hidden text-primary p-2">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
         </div>
-    </header>
+    </div>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] flex flex-col p-8 translate-x-full transition-transform duration-500 lg:hidden">
+        <div class="flex justify-between items-center mb-12">
+            <img src="sourcezy.png" alt="Sourcezy" class="h-10">
+            <button id="close-menu" class="text-primary">
+                <span class="material-symbols-outlined text-4xl">close</span>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-8 text-2xl font-display font-bold">
+            <a href="solutions.html" class="hover:text-accent">Solutions</a>
+            <a href="system_showcase.html" class="hover:text-accent">Hardware</a>
+            <a href="support.html" class="hover:text-accent">Support</a>
+            <a href="company.html" class="hover:text-accent">Company</a>
+            <a href="bulk_inquiry.html" class="hover:text-accent">Bulk Inquiry</a>
+            <a href="contact.html" class="text-accent border-t pt-8">Consult Expert</a>
+        </nav>
+    </div>
+</header>
 
     <main class="pt-24">
         <section class="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-to-br from-soft-bg/40 to-white">
@@ -227,6 +248,17 @@
     </footer>
 
     <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('translate-x-full');
+    });
+
+    closeBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('translate-x-full');
+    });
         // Intersection Observer for Scroll Reveal
         const observerOptions = { threshold: 0.15 };
         const observer = new IntersectionObserver((entries) => {

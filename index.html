@@ -55,6 +55,10 @@
             .glass-panel {
                 @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-2xl;
             }
+        .mobile-menu {
+        /* This ensures the blur works even on older iOS devices */
+        -webkit-backdrop-filter: blur(20px);
+    }
         }
     </style>
 </head>
